@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
                     document.querySelector('.song').play();
                     animationTimeline();
                 } else {
-                    history.back();
+                    window.location.href = 'index.html';
                 }
             }
         });
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
     }
 }).then((result) => {
     if (result.isConfirmed) {
-        history.back();
+        window.location.href = 'index.html';
     }
 });}
 });
