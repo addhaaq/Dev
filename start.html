@@ -546,6 +546,11 @@ footer a {
     }
 
     // Event listener saat halaman dimuat
+    window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
     window.addEventListener("load", (event) => {
       window.scrollTo(0, 0);
       var overlay = document.querySelector(".loading-message");
@@ -609,3 +614,4 @@ footer a {
 
 
 </html>
+
